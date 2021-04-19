@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.circle{
+	width: 20px;
+	height:20px;
+	position:absolute;
+	border-style: solid;
+	border-radius:20px;
+	border-width:1px;
+	border-color: rgb(1,0,0);
+}
+.parallax {
+  /* The image used */
+  background-image: url("background-balance-business-commerce-583846.jpg");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+<script type="text/javascript">
+	
+
+		document.onmousemove = animateCircles;
+
+		var colors = ['#ccc','#6cf','#eba13a'];
+
+		function animateCircles (event) {
+			var circle = document.createElement("div");
+			circle.setAttribute("class", "circle");
+			document.getElementById("topLayer").appendChild(circle);
+
+			circle.style.left = event.clientX + 'px';
+			circle.style.top = event.clientY + 'px';
+
+			var color = colors[Math.floor(Math.random() * colors.length)];
+			circle.style.borderColor = color;
+
+			circle.style.transition = "all 0.5s linear 0s";
+
+			circle.style.left = circle.offsetLeft - 20 + 'px';
+			circle.style.top = circle.offsetTop - 20 + 'px';
+
+			circle.style.width = "50px";
+			circle.style.height = "50px";
+			circle.style.borderWidth = "5px";
+			var backgroundColor = window.getComputedStyle(circle, null).getPropertyValue("background-color");
+			circle.style.background=backgroundColor;
+			circle.style.opacity = 0.6;
+
+			setTimeout(() => {
+                circle.remove();
+            }, 300);
+		}
+		
+</script>
+</head>
+<body>
+<div id="topLayer" style="position:absolute; z-index:999;">
+<div style="position:relative;">
+<div class="parallax">
+</div>
+<div  style="font-size:36px">
+<P>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar tempus lectus vel commodo. In ut magna eu turpis vulputate aliquam nec vel odio. Vivamus dignissim sapien sed libero maximus, sed eleifend ante pellentesque. Morbi nisi enim, placerat vitae leo a, hendrerit tristique dolor. Donec ut aliquet nunc. Nunc et sodales orci, eget viverra sapien. In ac nisi maximus, tristique ipsum eu, rutrum diam. Vivamus id fermentum tortor. Aenean ut nisl eu lorem ultricies mattis non at mauris. Phasellus consequat sagittis neque, quis pharetra nibh euismod ut. Duis in lacinia arcu, non sollicitudin nunc. Sed sit amet ligula a lorem tristique porttitor vitae vitae arcu. Mauris suscipit eros ac est pretium, vitae fermentum ante hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras laoreet mauris lorem, quis porta ipsum mollis ut.
+
+In fringilla posuere dui pharetra vehicula. Proin condimentum nec quam at vestibulum. Maecenas non tristique diam. Aenean iaculis sollicitudin varius. Sed eget tempus metus. Fusce mattis pulvinar porta. Integer id ante nec purus ultricies interdum sit amet in augue. Duis commodo blandit euismod. In ornare libero sit amet quam tincidunt, ut malesuada mi feugiat. Aliquam fringilla sem in ornare varius. Aenean non libero vulputate, molestie nisi quis, viverra felis. Sed ultricies consequat lectus at mattis.
+
+Nulla at fringilla risus. Nulla libero nulla, egestas cursus laoreet ac, rutrum sit amet neque. Ut quis risus malesuada, sollicitudin ipsum non, aliquet mi. Sed varius nisi a interdum congue. Morbi est ipsum, dignissim ac nisl a, vulputate pharetra sapien. Proin commodo sollicitudin rutrum. Donec semper vitae nulla id pharetra. Sed aliquam feugiat auctor. Donec urna mi, volutpat at lacinia eu, interdum ac arcu. Fusce elementum lectus eget neque vulputate consequat.
+
+Pellentesque ultrices aliquam orci at dignissim. Duis id sapien a libero ultrices imperdiet vitae sit amet mi. Maecenas et neque eget mi bibendum dictum nec sed ex. Maecenas et efficitur est. Duis vitae diam dolor. Morbi luctus dui turpis, eu egestas justo finibus eget. Sed ut libero ultrices, convallis nulla quis, pretium nisi. Quisque sed arcu in erat aliquet luctus. Proin quis magna nunc. In vel tempor massa, sed egestas lectus. Duis luctus egestas ligula nec ultricies. Curabitur elementum velit in dolor mattis vehicula. Vivamus id ultricies tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce eu condimentum lectus.
+
+In blandit enim in nunc condimentum, at sagittis erat placerat. Nullam congue magna id mi luctus pretium. Vivamus at diam neque. Fusce sed vestibulum urna, a viverra nulla. Maecenas lacus ante, condimentum at risus sed, vestibulum fringilla magna. Integer at sem bibendum, lobortis neque non, sollicitudin nisl. Quisque quam enim, scelerisque dapibus nibh ut, vulputate tincidunt tortor. Nunc eget quam elit. Maecenas et elit interdum, bibendum lorem quis, pharetra elit. Nunc fermentum neque eu tortor bibendum, vitae fringilla lectus pulvinar. Aenean orci sem, mollis ac lobortis eget, elementum vitae dolor. Curabitur ornare velit mattis turpis blandit dapibus eget vitae augue. Maecenas auctor vel ipsum ac congue. Pellentesque lorem libero, tempus et lorem non, porttitor venenatis ex. Donec nec est rutrum, eleifend arcu id, finibus metus. Fusce ut purus quis erat tristique consectetur eget ac lorem.
+</P>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
